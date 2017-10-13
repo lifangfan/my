@@ -82,7 +82,9 @@ int main()
     printf("//*****bigger******bigger of two nums*********************//\n");
     printf("//*****oppnum******opposite of one num********************//\n");
     printf("//********************************************************//\n");
-
+    printf("\n");
+    printf("\n");
+ 
     char cmd[128];
     while(1)
     {
@@ -134,5 +136,4 @@ int main()
     }
     return 0;
 }
-
 
