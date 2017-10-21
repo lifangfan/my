@@ -15,7 +15,7 @@
 /*
  * Revision log:
  *
- * Created by Mengning,2012/12/30
+ * Created by sudanyuan,2017/10/19
  *
  */
 
@@ -38,13 +38,7 @@ typedef struct LinkTableNode
 /*
  * LinkTable Type
  */
-typedef struct LinkTable tLinkTable; 
-{
-    tLinkTableNode *pHead;
-    tLinkTableNode *pTail;
-    int			SumOfNode;
-    pthread_mutex_t mutex;
-}tLinkTable;
+typedef struct LinkTable tLinkTable;   
 
 /*
  * Create a LinkTable
@@ -64,7 +58,7 @@ int AddLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode);
 int DelLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode);
 /*
  * Search a LinkTableNode from LinkTable
- * int Conditon(tLinkTableNode * pNode);
+ * int Conditon(tLinkTableNode * pNode,void *args);
  */
 tLinkTableNode * SearchLinkTableNode(tLinkTable *pLinkTable, int Conditon(tLinkTableNode * pNode,void *args),void *args);
 /*
@@ -77,5 +71,3 @@ tLinkTableNode * GetLinkTableHead(tLinkTable *pLinkTable);
 tLinkTableNode * GetNextLinkTableNode(tLinkTable *pLinkTable,tLinkTableNode * pNode);
 
 #endif /* _LINK_TABLE_H_ */
-
-
